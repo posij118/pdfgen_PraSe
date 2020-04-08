@@ -22,16 +22,16 @@ for filename in pdffiles:
 	pdf = FPDF()
 	
 	pdf.add_page()
-	pdf.set_font("Arial", size = 12)
-	cnt = 1
+	pdf.add_font('FreeSans', '', 'FreeSans.ttf', True)
+	pdf.set_font('FreeSans', size = 12)
 	
 	while True:
-		t = raw_input()
+		t = unicode(raw_input(), 'utf8')
 		if t == '|':
 			break
 		
-		pdf.cell(200, 5, txt = t, ln = cnt, align = 'L')
-		cnt = cnt + 1
+		pdf.multi_cell(0, 6, txt = t, align = 'L')
+		
 		
 	pdf.output(filename + "_opraveno.pdf")
 	
