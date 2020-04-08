@@ -15,3 +15,5 @@ Skript generuje pdfka ve formátu vhodném k vložení na server s poznámkami z
 	4. Když jste hotovi, vygenerujte pdf příkazem
 	
 			python pdfgen.py < pozn.txt
+		
+	Pak už stačí jen nahrát na gimliho.
