@@ -27,7 +27,7 @@ for filename in pdffiles:
 	
 	pdf.cell(195, 6, border = 0, txt = 'Opravoval: Pavel Hudec', ln = 1, align = 'L')
 	pdf.image('prasatko.png', 175 , 5, 80, 0)
-	pdf.cell(195, 15, border = 0, txt = '', ln = 1, align = 'L')
+	pdf.cell(195, 15, border = 'B', txt = '', ln = 1, align = 'L')
 	while True:
 		t = unicode(raw_input(), 'utf8')
 		if t == '|':
