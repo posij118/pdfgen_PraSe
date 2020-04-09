@@ -5,7 +5,7 @@ import sys
 pdffiles = [];
 
 for filename in os.listdir(os.getcwd()):
-	if filename.endswith(".pdf") & (not (filename.endswith("opraveno.pdf"))):
+	if filename.endswith('.pdf') & (not (filename.endswith('opraveno.pdf'))):
 		s = '';
 		for c in filename:
 			if c == '.':
@@ -25,6 +25,9 @@ for filename in pdffiles:
 	pdf.add_font('FreeSans', '', 'FreeSans.ttf', True)
 	pdf.set_font('FreeSans', size = 12)
 	
+	pdf.cell(195, 6, border = 0, txt = 'Opravoval: Pavel Hudec', ln = 1, align = 'L')
+	pdf.image('prasatko.png', 175 , 5, 80, 0)
+	pdf.cell(195, 15, border = 0, txt = '', ln = 1, align = 'L')
 	while True:
 		t = unicode(raw_input(), 'utf8')
 		if t == '|':
@@ -33,7 +36,4 @@ for filename in pdffiles:
 		pdf.multi_cell(0, 6, txt = t, align = 'L')
 		
 		
-	pdf.output(filename + "_opraveno.pdf")
-	
-
-		
+	pdf.output(filename + '_opraveno.pdf')
